@@ -5,6 +5,12 @@
       "description": "The only stream. The loneliest of streams!",
       "user_id": "100878915433115679271",
       "id": 1
+    },
+    {
+      "title": "A Second Stream for Testing",
+      "description": "wahoo baloo boyeah",
+      "user_id": "100878915433115679271",
+      "id": 2
     }
   ]
 }
