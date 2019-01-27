@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signIn, signOut } from '../actions'; 
+import { SmallLoader } from './Loaders';
 
 class GoogleAuth extends Component {
 
@@ -19,14 +20,14 @@ class GoogleAuth extends Component {
 
     onAuthChange = ( isSignedIn ) => {
         if ( isSignedIn ) {
-            this.props.signIn();
+            this.props.signIn(this.auth.currentUser.get().getId());
         } else {
             this.props.signOut();
         }
     }
 
     onSignInClick = () => {
-        this.auth.signIn( this.auth.currentUser.get().getId() );
+        this.auth.signIn();
     }
 
     onSignOutClick = () => {
@@ -35,7 +36,7 @@ class GoogleAuth extends Component {
 
     renderAuthButton() {
         if ( this.props.isSignedIn === null ) {
-            return <div className="ui active centered inline loader"></div>;
+            return <SmallLoader />;
         } else if ( this.props.isSignedIn ) {
             return (
                 <button onClick={this.onSignOutClick} className="ui grey google button">
