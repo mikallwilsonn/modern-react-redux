@@ -1,0 +1,22 @@
+{
+  "streams": [
+    {
+      "title": "Test Stream Number One EDITED AGAIN",
+      "description": "Here it is. Whoopee an edit with more edit",
+      "user_id": "100878915433115679271",
+      "id": 1
+    },
+    {
+      "title": "Another Stream",
+      "description": "Yup",
+      "user_id": "100878915433115679271",
+      "id": 2
+    },
+    {
+      "title": "A Third",
+      "description": "Hey does this work with the new refactor?",
+      "user_id": "100878915433115679271",
+      "id": 3
+    }
+  ]
+}
