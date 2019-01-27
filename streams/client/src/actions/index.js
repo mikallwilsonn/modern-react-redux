@@ -26,7 +26,6 @@ export const createStream = ( formValues ) => async ( dispatch, getState ) => {
     const { user_id } = getState().auth;
     const response = await streams.post( '/streams', { ...formValues, user_id: user_id} );
     dispatch({ type: CREATE_STREAM, payload: response.data });
-
     history.push( '/' );
 }
 
@@ -46,7 +45,6 @@ export const fetchStream = ( id ) => async dispatch => {
 export const editStream = ( id, formValues ) => async dispatch => {
     const response = await streams.patch( `/streams/${id}`, formValues );
     dispatch({ type: EDIT_STREAM, payload: response.data });
-
     history.push( '/' );
 }
 
@@ -54,4 +52,5 @@ export const editStream = ( id, formValues ) => async dispatch => {
 export const deleteStream = ( id ) => async dispatch => {
     await streams.delete( `/streams/${id}` );
     dispatch({ type: DELETE_STREAM, payload: id });
+    history.push( '/' );
 }
