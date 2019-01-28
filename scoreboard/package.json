@@ -1,0 +1,16 @@
+{
+  "name": "react-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "ws"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikallwilsonn/react-scoreboard.git"
+  },
+  "dependencies": {
+    "local-web-server": "^2.5.2"
+  }
+}
